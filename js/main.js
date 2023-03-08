@@ -6,9 +6,11 @@ let passworld = ""
 for (let i = 0; i < 8; i++){
     const randomNumber = Math.floor(Math.random() * chars.length) // floor nivela tirando a virgula - random gera um nº aleatório
     passworld += chars.substring(randomNumber, randomNumber + 1)  // faz um corte dentro da string chars
-    console.log(passworld)
+    
+  }
 
- }
+  const inputEl = document.querySelector("#passworld")
+  inputEl.value = passworld
 
 }
 
