@@ -5,14 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    
 </head>
 <body>
-    <h1>Gerador de Senha</h1>
-    <p>Utilize o nosso gerador online para criar uma senha forte e segura.</p>
+    <section class="hero">
+        <h1 class="title">Gerador de Senha</h1>
+        <p class="subtitle">Utilize o nosso gerador online para criar uma senha forte e segura.</p>
+        
+        <input type="range" id="passworld-length" value="16" min="4" max="64">
+        <button id="copy">Copiar Senha</button>
+    </section><!--hero-->
 
-    <input type="text" id="passworld" name="passworld">
-    <input type="range" id="passworld-length" value="16" min="4" max="64">
-    <button id="copy">Copiar Senha</button>
+    <section class="box">
+        <div class="passworld">
+         <div class="text">
+            <input type="text" id="passworld" name="passworld">   
+         </div><!--text-->  
+         <div class="actions">
+          <button id="copy1">
+            <img src="copy.svg" width="42"/>
+          </button>
+         </div><!--actions-->  
+        </div><!--passworld-->
+    </section><!--box-->
 
     <script src="js/main.js"></script>
 </body>
