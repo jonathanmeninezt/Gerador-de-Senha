@@ -12,6 +12,18 @@ for (let i = 0; i < 8; i++){
   const inputEl = document.querySelector("#passworld")
   inputEl.value = passworld
 
-}
+  }
+
+  const passworldLengthEl = document.querySelector('#passworld-length')
+  passworldLengthEl.addEventListener("input", function() {
+    const passworldLength = passworldLengthEl.value
+    console.log(passworldLength)
+
+  })
+    
+
+  
+
+
 
 generatePassworld()
