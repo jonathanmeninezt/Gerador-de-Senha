@@ -46,6 +46,7 @@ for (let i = 0; i < passworldLength; i++){
   const passworldLengthEl = document.querySelector('#password-length')
   passworldLengthEl.addEventListener("input", function() {
     passworldLength = passworldLengthEl.value
+    document.querySelector("#password-length-text").innerText = passworldLength
     
     generatePassworld()
 
