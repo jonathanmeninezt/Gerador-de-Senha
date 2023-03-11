@@ -10,32 +10,30 @@
     
 </head>
 <body>
-    <section class="hero">
-        <h1 class="title">Gerador de Senha</h1>
-        <p class="subtitle">Utilize o nosso gerador online para criar uma senha forte e segura.</p>
-        
-        <input type="range" id="passworld-length" value="16" min="4" max="64">
-        <button id="copy">Copiar Senha</button>
-    </section><!--hero-->
-
-    <section class="box">
-        <div class="passworld">
-         <div class="text">
-            <input type="text" id="passworld" name="passworld">   
-         </div><!--text-->  
-         <div class="actions">
-          <button id="copy1">
-            <img src="copy.svg" width="42"/>
-          </button><!--copy-->
-          <button id="renew">
-            <img src="renew.svg" width="42">
-          </button><!--renew-->
-         </div><!--actions-->  
-        </div><!--passworld-->
-        <div class="security-indicator">
-         <div id="security-indicator-bar" class="bar" style="width: 90%;"></div>
-        </div><!--security-indicator-->
-    </section><!--box-->
+    <main>
+        <section class="hero">
+          <h1 class="title">Gerador de senha</h1>
+          <p class="subtitle"> Utilize o nosso gerador online para criar uma senha forte e segura.</p>
+        </section><!--hero-->
+  
+        <section class="box">
+          <div class="password">
+            <div class="text">
+              <input type="text" name="password" id="password" />
+            </div><!--text-->
+            <div class="actions">
+              <button id="copy-1">
+                <img src="img/copy.svg" width="42" />
+              </button>
+              <button id="renew">
+                <img src="img/renew.svg" width="42" />
+              </button>
+            </div><!--actions-->
+          </div><!--passworld-->
+          <div class="security-indicator">
+            <div id="security-indicator-bar" class="bar safe" style="width: 90%"></div>
+          </div><!--security-indicator-->
+        </section><!--box-->
 
     <section class="box customize">
         <h3 class="title">Personalizar</h3>
@@ -63,7 +61,13 @@
           </div><!--config-->
         </div><!--actions-->
       </section><!--box customize-->
+      
+      <div class="submit">
+        <button id="copy-2">Copiar senha</button>
+      </div><!--submit-->
+    </main>
 
     <script src="js/main.js"></script>
+    
 </body>
 </html>
