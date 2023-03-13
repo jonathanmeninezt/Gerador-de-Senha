@@ -44,7 +44,11 @@ for (let i = 0; i < passworldLength; i++){
   }
 
   function calculateQualy(){
-    const percent = Math.round((passworldLength / 64) * 100)
+    //T*0.25 + M*0.15 + N*0.25 + S*0.35 = 100%
+
+    const percent = Math.round((passworldLength / 64) * 25 + 
+    (upperCaseCheckEl.checked ? 15 : 0) + (numberCheckEl.checked ? 20 : 0) +
+    (symbolCheckEl.checked ? 40 : 0))
     
 
     securityIndicatorBarEl.style.width = `${percent}%`
