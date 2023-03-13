@@ -40,6 +40,7 @@ for (let i = 0; i < passworldLength; i++){
   inputEl.value = passworld
 
   calculateQualy()
+  calculateFontSize()
 
   }
 
@@ -68,7 +69,32 @@ for (let i = 0; i < passworldLength; i++){
       securityIndicatorBarEl.classList.add("critical")
       securityIndicatorBarEl.classList.remove("warning")
       securityIndicatorBarEl.classList.remove("safe")
+    }
 
+    if(percent >= 100){
+      securityIndicatorBarEl.classList.add("completed")
+    }else{
+      securityIndicatorBarEl.classList.remove("completed")
+    }
+  }
+
+  function calculateFontSize(){
+    if(passworldLength > 45){
+      inputEl.classList.remove("font-small")
+      inputEl.classList.remove("font-xsmall")
+      inputEl.classList.add("font-xxsmall")
+    }else if(passworldLength > 32){
+      inputEl.classList.remove("font-small")
+      inputEl.classList.add("font-xsmall")
+      inputEl.classList.remove("font-xxsmall")
+    }else if(passworldLength > 22){
+      inputEl.classList.add("font-small")
+      inputEl.classList.remove("font-xsmall")
+      inputEl.classList.remove("font-xxsmall")
+    }else{
+      inputEl.classList.remove("font-small")
+      inputEl.classList.remove("font-xsmall")
+      inputEl.classList.remove("font-xxsmall")
     }
   }
 
