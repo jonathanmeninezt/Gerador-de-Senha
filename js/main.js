@@ -3,6 +3,8 @@ const inputEl = document.querySelector("#password")
 const upperCaseCheckEl = document.querySelector("#uppercase-check")
 const numberCheckEl = document.querySelector("#number-check")
 const symbolCheckEl = document.querySelector("#symbol-check")
+const securityIndicatorBarEl = document.querySelector("#security-indicator-bar")
+
 
 function generatePassworld(){
 let chars = "abcdefghjkmnpqrstuvwxyz"
@@ -37,7 +39,18 @@ for (let i = 0; i < passworldLength; i++){
   
   inputEl.value = passworld
 
+  calculateQualy()
+
   }
+
+  function calculateQualy(){
+    const percent = Math.round((passworldLength / 64) * 100)
+    
+
+    securityIndicatorBarEl.style.width = `${percent}%`
+  }
+
+
 
   function copy(){
     navigator.clipboard.writeText(inputEl.value)  //clipboard - ação de copiar e colar
