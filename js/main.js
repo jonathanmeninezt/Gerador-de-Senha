@@ -52,6 +52,24 @@ for (let i = 0; i < passworldLength; i++){
     
 
     securityIndicatorBarEl.style.width = `${percent}%`
+
+    if(percent > 69){
+      //safe
+      securityIndicatorBarEl.classList.remove("critical")
+      securityIndicatorBarEl.classList.remove("warning")
+      securityIndicatorBarEl.classList.add("safe")
+    }else if(percent > 50){
+      //warning
+      securityIndicatorBarEl.classList.remove("critical")
+      securityIndicatorBarEl.classList.add("warning")
+      securityIndicatorBarEl.classList.remove("safe")
+    }else {
+      //critical
+      securityIndicatorBarEl.classList.add("critical")
+      securityIndicatorBarEl.classList.remove("warning")
+      securityIndicatorBarEl.classList.remove("safe")
+
+    }
   }
 
 
