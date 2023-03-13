@@ -21,7 +21,7 @@ body {
   }
   .hero .subtitle {
     font-size: 1.125rem;
-    color: #828282;
+    color: #5f5e5e;
   }
   
   .box {
@@ -98,6 +98,13 @@ body {
     margin-bottom: 2rem;
     padding-bottom: 0.75rem;
   }
+
+  h1.title{
+    margin-top: 4rem;
+    text-transform: uppercase;
+  }
+
+
   .customize .actions {
     display: flex;
     gap: 3rem;
