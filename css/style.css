@@ -1,8 +1,19 @@
 body {
-    background-color: #acb7c7;
+    background-image: linear-gradient(to right, rgb(186, 186, 249), rgb(104, 194, 202), rgb(34, 237, 210), rgb(78, 152, 177));
+    background-size: 200% 100%;
     font-family: "Inter", sans- serif;
     color: #252525;
     padding: 2rem;
+    animation: degrade-animate 5s infinite alternate ;
+  }
+
+  @keyframes degrade-animate{
+    0%{
+      background-position-x: 0%;
+    }
+    100%{
+      background-position-x: 100%;
+    }
   }
   
   main {
@@ -73,6 +84,10 @@ body {
     opacity: 0.7;
     transition: opacity 0.2s;
   }
+
+  .password .actions button:hover {
+    opacity: 1;
+  }
   
   .security-indicator {
     height: 10px;
@@ -115,6 +130,8 @@ body {
   h1.title{
     margin-top: 4rem;
     text-transform: uppercase;
+    text-decoration:underline white;
+    color: rgb(100, 100, 100);
   }
 
 
@@ -175,6 +192,10 @@ body {
     width: 0;
     opacity: 0;
     cursor: pointer;
+  }
+
+  .checkbox-container input:hover {
+    opacity: 1;
   }
   .checkbox-container .checkmark {
     position: absolute;
